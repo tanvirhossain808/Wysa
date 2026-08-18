@@ -13,10 +13,10 @@ app.use("/health", (req, res) =>
   res.json({ status: "ok", message: "sever is running" }),
 );
 
-app.use("api/auth", authRouter);
-app.use("api/chats", chatsRoutes);
-app.use("api/messages", messagesRoutes);
-app.use("api/users", usersRoutes);
+app.use("/api/auth", authRouter);
+app.use("/api/chats", chatsRoutes);
+app.use("/api/messages", messagesRoutes);
+app.use("/api/users", usersRoutes);
 app.use(errorHandler);
 
 // serve frontend in production
