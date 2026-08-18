@@ -4,7 +4,7 @@ import chatsRoutes from "./routes/chatRoutes";
 import messagesRoutes from "./routes/messageRoutes";
 import usersRoutes from "./routes/userRoutes";
 import { clerkMiddleware } from "@clerk/express";
-import { errorHandler } from "./middleware.ts/errorHandler";
+import { errorHandler } from "./middleware/errorHandler";
 const app = express();
 app.use(express.json());
 app.use(clerkMiddleware());
