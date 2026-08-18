@@ -13,6 +13,9 @@ import app from "./src/app";
 import { connectDB } from "./src/config/database";
 const port = process.env.PORT || 3000;
 
-connectDB().then(() =>
-  app.listen(port, () => console.log("server is running", port)),
-);
+connectDB()
+  .then(() => app.listen(port, () => console.log("server is running", port)))
+  .catch((error) => {
+    console.error("failed to start the server", error);
+    process.exit(1);
+  });
