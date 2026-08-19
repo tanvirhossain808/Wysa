@@ -35,7 +35,15 @@
       ],
       "@clerk/expo",
       "expo-secure-store",
-      "expo-web-browser"
+      "expo-web-browser",
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "wysa",
+          "organization": "solo-n45"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
