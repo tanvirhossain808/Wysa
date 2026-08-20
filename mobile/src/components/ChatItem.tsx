@@ -8,14 +8,14 @@ const ChatItem = ({ chat, onPress }: { chat: Chat; onPress: () => void }) => {
   const participant = chat.participant;
 
   //   const { onlineUsers, typingUsers, unreadChats } = useSocketStore();
-  return (
-    <View>
-      <Text>chat item</Text>
-    </View>
-  );
-  const isOnline = onlineUsers.has(participant._id);
-  const isTyping = typingUsers.get(chat._id) === participant._id;
-  const hasUnread = unreadChats.has(chat._id);
+  // return (
+  //   <View>
+  //     <Text>chat item</Text>
+  //   </View>
+  // );
+  const isOnline = true;
+  const isTyping = false;
+  const hasUnread = true;
 
   return (
     <Pressable

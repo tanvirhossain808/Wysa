@@ -1,4 +1,4 @@
-import { useApi } from "@/lib/axious";
+import { useApi } from "@/lib/axios";
 import { User } from "@/types";
 import { useMutation, useQuery } from "@tanstack/react-query";
 
