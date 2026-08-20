@@ -18,7 +18,7 @@ app.use("/api/chats", chatsRoutes);
 app.use("/api/messages", messagesRoutes);
 app.use("/api/users", usersRoutes);
 app.use(errorHandler);
-console.log("hey");
+
 // serve frontend in production
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../../web/dist")));
