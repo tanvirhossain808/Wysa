@@ -6,6 +6,7 @@ import { ClerkProvider } from "@clerk/expo";
 import AuthSync from "@/components/AuthSync";
 import { StatusBar } from "expo-status-bar";
 import * as Sentry from "@sentry/react-native";
+import SocketConnection from "@/components/SocketConnection";
 const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!;
 const queryClient = new QueryClient();
 if (!publishableKey) {
@@ -41,6 +42,7 @@ export default Sentry.wrap(function RootLayout() {
     <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
       <QueryClientProvider client={queryClient}>
         <AuthSync />
+        <SocketConnection />
         <StatusBar style="light" />
         <Stack
           screenOptions={{
