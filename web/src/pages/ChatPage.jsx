@@ -87,7 +87,7 @@ function ChatPage() {
               >
                 <SparklesIcon className="w-4 h-4 text-primary-content" />
               </div>
-              <span className="font-bold">Whisper</span>
+              <span className="font-bold">Wysa</span>
             </Link>
             <UserButton />
           </div>

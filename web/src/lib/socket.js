@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { io } from "socket.io-client";
 
-const SOCKET_URL = import.meta.env.VITE_API_URL + "/api";
+const SOCKET_URL = "https://wysa-slmu.onrender.com";
 
 export const useSocketStore = create((set, get) => ({
   socket: null,
