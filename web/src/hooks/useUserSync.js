@@ -5,7 +5,7 @@ import { useAuth } from "@clerk/react";
 
 function useUserSync() {
   const { isSignedIn, getToken } = useAuth();
-
+  console.log(isSignedIn);
   const {
     mutate: syncUser,
     isPending,
@@ -20,6 +20,7 @@ function useUserSync() {
           headers: { Authorization: `Bearer ${token}` },
         },
       );
+      console.log(res.data, "data");
       return res.data;
     },
   });
