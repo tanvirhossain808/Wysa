@@ -2,7 +2,8 @@ import { formatTime } from "../lib/utils";
 
 export function MessageBubble({ message, currentUser }) {
   const isMe = message.sender?._id === currentUser?._id;
-
+  console.log(currentUser, "ms");
+  console.log(isMe, currentUser?._id, message.sender?._id, "me");
   return (
     <div className={`flex ${isMe ? "justify-end" : "justify-start"}`}>
       <div

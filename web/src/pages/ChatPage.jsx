@@ -19,7 +19,7 @@ import { useSocketConnection } from "../hooks/useSocketConnection";
 // feel free to refactor it as you wish ✨
 function ChatPage() {
   const { data: currentUser } = useCurrentUser();
-
+  console.log(currentUser, "curetn user legnth");
   const [searchParams, setSearchParams] = useSearchParams();
   const activeChatId = searchParams.get("chat");
 
@@ -37,7 +37,7 @@ function ChatPage() {
   const { data: messages = [], isLoading: messagesLoading } =
     useMessages(activeChatId);
   const startChatMutation = useGetOrCreateChat();
-
+  console.log(messages.length);
   // scroll to bottom when chat or messages changes
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
