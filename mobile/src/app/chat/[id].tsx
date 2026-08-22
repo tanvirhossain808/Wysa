@@ -134,7 +134,7 @@ const ChatDetailScreen = () => {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-surface" edges={["top", "bottom"]}>
+    <SafeAreaView className="flex-1 bg-surface" edges={["top"]}>
       {/* Header */}
       <View className="flex-row items-center px-4 py-2 bg-surface border-b border-surface-light">
         <Pressable onPress={() => router.back()}>
@@ -175,8 +175,9 @@ const ChatDetailScreen = () => {
 
       <KeyboardAvoidingView
         className="flex-1"
-        behavior={Platform.OS === "ios" ? "padding" : "height"}
-        keyboardVerticalOffset={0}
+        behavior={Platform.OS === "ios" ? "padding" : "padding"}
+        // keyboardVerticalOffset={100}
+        // keyboardVerticalOffset={Platform.OS === "android" ? 0 : 0}
       >
         <View className="flex-1 bg-surface">
           {isLoading ? (

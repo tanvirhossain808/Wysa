@@ -85,7 +85,9 @@ function Header() {
   return (
     <View className="px-5 pt-2 pb-4">
       <View className="flex-row items-center justify-between">
-        <Text className="text-2xl font-bold text-foreground">Chats</Text>
+        <Text className="text-2xl font-bold text-foreground flex-grow">
+          Chats
+        </Text>
         <Pressable
           className="size-10 bg-primary rounded-full items-center justify-center"
           onPress={() => router.push("/new-chat")}

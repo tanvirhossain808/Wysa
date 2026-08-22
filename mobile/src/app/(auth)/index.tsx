@@ -93,7 +93,7 @@ export default function AuthScreen() {
           </View>
 
           {/* AUTH BUTTONS */}
-          <View className="flex-row gap-4 mt-10">
+          <View className="flex-row gap-2 mt-10">
             {/* GOOGLE BTN */}
             <Pressable
               className="flex-1 flex-row items-center justify-center gap-2 bg-white/95 py-4 rounded-2xl active:scale-[0.97]"
@@ -106,19 +106,22 @@ export default function AuthScreen() {
                 <ActivityIndicator size="small" color="#1a1a1a" />
               ) : (
                 <>
-                  <Image
-                    source={require("../../../assets/images/google.png")}
-                    style={{ width: 20, height: 20 }}
-                    contentFit="contain"
-                  />
-                  <Text className="text-gray-900 font-semibold text-sm">
-                    Google
+                  <View className="">
+                    <Image
+                      source={require("../../../assets/images/google.png")}
+                      style={{ width: 20, height: 20 }}
+                      contentFit="contain"
+                      className="w-1/2 hidden"
+                    />
+                  </View>
+                  <Text className="text-gray-900 text-start font-semibold text-sm">
+                    Google{" "}
                   </Text>
                 </>
               )}
             </Pressable>
 
-            {/* APPLE BTN */}
+            {/* github BTN */}
             <Pressable
               className="flex-1 flex-row items-center justify-center gap-2 bg-white/10 py-4 rounded-2xl border border-white/20 active:scale-[0.97]"
               disabled={isLoading}
@@ -130,9 +133,11 @@ export default function AuthScreen() {
                 <ActivityIndicator size="small" color="#FFFFFF" />
               ) : (
                 <>
-                  <Ionicons name="logo-github" size={20} color="#FFFFFF" />
-                  <Text className="text-foreground font-semibold text-sm">
-                    Github
+                  <View className="flex items-center">
+                    <Ionicons name="logo-github" size={20} color="#FFFFFF" />
+                  </View>
+                  <Text className="  text-foreground font-semibold text-sm">
+                    Github{" "}
                   </Text>
                 </>
               )}

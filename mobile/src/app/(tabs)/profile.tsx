@@ -60,9 +60,8 @@ const ProfileTab = () => {
   const { user } = useUser();
 
   return (
-    <SafeAreaView>
+    <SafeAreaView className="bg-surface-dark">
       <ScrollView
-        className="bg-surface-dark"
         contentInsetAdjustmentBehavior="automatic"
         showsVerticalScrollIndicator={false}
         // indicatorStyle="white"
@@ -142,15 +141,19 @@ const ProfileTab = () => {
         ))}
 
         {/* Logout Button */}
-        <Pressable
-          className="mx-5 mt-8 bg-red-500/10 rounded-2xl py-4 items-center active:opacity-70 border border-red-500/20"
-          onPress={() => signOut()}
-        >
-          <View className="flex-row items-center">
-            <Ionicons name="log-out-outline" size={20} color="#EF4444" />
-            <Text className="ml-2 text-red-500 font-semibold">Log Out</Text>
-          </View>
-        </Pressable>
+        <View className="px-5">
+          <Pressable
+            className=" mt-8 px-0 bg-red-500/10 rounded-2xl py-4 items-center active:opacity-70 border border-red-500/20"
+            onPress={() => signOut()}
+          >
+            <View className="flex-row items-center">
+              <Ionicons name="log-out-outline" size={20} color="#EF4444" />
+              <Text className="ml-2 flex-shrink-0 text-red-500 font-semibold">
+                Log Out{" "}
+              </Text>
+            </View>
+          </Pressable>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
